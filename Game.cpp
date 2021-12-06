@@ -116,4 +116,20 @@ void InitGrid()
 	}
 }
 
+void InitializeFruit()
+{
+	Point2f point{ GetRand(0, int(g_WindowWidth)), GetRand(0, int(g_WindowHeight)) };
+	GetCellIdx(point);
+	int idx{ GetCellIdx(point) };
+}
+
+int GetCellIdx(Point2f point)
+{
+	for (int i = 0; i < g_GridSize; i++)
+  {
+		if(IsPointInRect(point, pCells[i]))
+			return i;
+  }
+}
+
 #pragma endregion ownDefinitions

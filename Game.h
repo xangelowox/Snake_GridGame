@@ -16,11 +16,11 @@ float g_WindowHeight{ 700 };
 const float g_CellSize{ 25 };
 int g_GridSize{ (g_WindowWidth/g_CellSize) * (g_WindowHeight/g_CellSize) };
 Rectf* pCells{ new Rectf[g_GridSize] {} };
-
+int g_Fruit{};
 // Declare your own functions here
 void InitGrid();
-
-
+void InitializeFruit();
+int GetCellIdx(Point2f point);
 #pragma endregion ownDeclarations
 
 #pragma region gameFunctions											
